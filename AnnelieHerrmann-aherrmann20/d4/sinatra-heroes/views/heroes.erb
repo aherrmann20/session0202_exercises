@@ -2,6 +2,6 @@
 
 <ul>
 	<% @heroes.each do |hero| %>
-		<li><%= hero %></li>
+		<li><a href="/heroes/<%= hero %>"><%= hero %></a></li>
 	<% end %>
 </ul>

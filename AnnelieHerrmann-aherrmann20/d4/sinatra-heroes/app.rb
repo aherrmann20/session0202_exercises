@@ -11,10 +11,10 @@ get "/heroes" do
 end
 
 get "/heroes/:hero" do |hero|
-	heroes = {"Batman" => "batarang", "Superman" => "flight", "Rogue" => "strength", "Wolverine" => "attitude"}
+	heroes = {"Batman" => "being rich", "Superman" => "strength", "Rogue" => "deadly touch", "Wolverine" => "attitude"}
 
 	#param because hero is the param in the "get" command
-	hero = params["hero"]
+	hero = hero
 	weapon = heroes[hero]
 	#hash lookups
 	@hero_name = params["hero"]
