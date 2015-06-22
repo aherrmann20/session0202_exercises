@@ -1,16 +1,17 @@
-<h1>New Article</h1>
+<h1>Edit article</h1>
 
-<% render 'form' %>
-<%= link_to 'Back', articles_path %>
+<%= render 'form' %>
+
+<% link_to 'Back', articles_path %>
 
 <!--
-<%= form_for :article, url: articles_path do |f| %>
+<%= form_for :aricle, url: article_path(@article), method: :patch do |f| %>
 
-	<%if @article.errors.any? %>
+	<% if @article.errors.any? %>
 		<div id="error_explanation">
 			<h2>
-				<%= pluralize(@article.errors.count, "error") %> prohibited
-
+				<%= pluralize(@article.errors.count, "error") %>
+				prohibited 
 				this article from being saved:
 			</h2>
 			<ul>
@@ -22,11 +23,6 @@
 	<% end %>
 
 	<p>
-		<%= f.label :title %>
-		<%= f.text_field :title %>
-	</p>
-
-	<p>
 		<%= f.label :text %><br>
 		<%= f.text_area :text %>
 	</p>
@@ -34,6 +30,7 @@
 	<p>
 		<%= f.submit %>
 	</p>
+
 <% end %>
 
 <%= link_to 'Back', articles_path %>
