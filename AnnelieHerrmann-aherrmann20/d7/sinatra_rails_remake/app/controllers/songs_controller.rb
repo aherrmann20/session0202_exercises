@@ -19,6 +19,6 @@ class SongsController < ApplicationController
 			"You are the Music in Me" => "High School Musical 2"
 		}
 		@song = params[:song]
-		@lyrics = songs[@song]
+		@movie = songs[@song]
 	end
 end
