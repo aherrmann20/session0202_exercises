@@ -1,0 +1,5 @@
+The '/' route in sinatra would become 'root welcome#index' in config/routes.rb linked to a view in views/welcome called index.html.erb through the welcome_controller.
+
+The '/heroes' route would link to a view called index.html.erb through the heroes_controller under the method index.
+
+The '/heroes/:hero' route would link to a view called new.html.erb through the heroes_controler under the method show. It would use a resource of heroes, defined in the config/routes.rb file as routes :heroes. @hero would be defined in the show method in heroes_controller as Heroes.find(params[:id]).
