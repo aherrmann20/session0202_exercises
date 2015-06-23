@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tile: MyString
+  movie: MyString
+  lyrics: MyString
+  video: MyString
+
+two:
+  tile: MyString
+  movie: MyString
+  lyrics: MyString
+  video: MyString
