@@ -5,12 +5,16 @@ class PlacesController < ApplicationController
 
 	def show
 		@place = Place.find params[:id]
+		@place_opening_string = @place.opening_time.to_s
+		@place_closing_string = @place.closing_time.to_s
 	end
 
 	def new
 		@place = Place.new
-		@place_opening_string = @place.opening_time.to_s
-		@place_closing_string = @place.closing_time.to_s
+	end
+
+	def edit
+		@place = Place.find(params[:id])
 	end
 
 	def create
@@ -22,6 +26,16 @@ class PlacesController < ApplicationController
 			render 'new'
 		end
 	end
+
+	def update
+		@place = Place.find(params[:id])
+
+		if @place.update(place_params)
+			redirect_to @place
+		else
+			render 'edit'
+		end
+	end	
 
 	private
 	def place_params
