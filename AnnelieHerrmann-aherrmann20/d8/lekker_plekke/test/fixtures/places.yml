@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  sort: MyString
+  address: MyString
+  opening_time: 1
+  closing_time: 1
+
+two:
+  name: MyString
+  sort: MyString
+  address: MyString
+  opening_time: 1
+  closing_time: 1
