@@ -1,0 +1,31 @@
+1. 9 routes:
+	comments#create
+	comments#destroy
+	treasures#index
+	treasures#show
+	treasures#new
+	treasures#edit
+	treasures#create
+	treasures#update
+	treasures#destroy
+
+2. 2 models:
+	"comments", "treasures"
+
+3. 3 controllers:
+	application, comments, treasures
+
+4. CRUD logic takes place in the controllers.
+
+5. app/treasures/new.html.erb allows us to create a new treasure
+
+6. app/treasures/show.html.erb allows us to commont on an existing feature
+
+7. app/treasures/index.html.erb is our home page
+
+8. app/treasures/index.html.erb lists all the treasures
+
+9. 	Treasure attributes: title, description, created_at && updated_at timestamps
+	Comments attributes: bru, comment, treasure_id, created_at && updated_at timestamps
+
+10. config/db/schema.rb displays the attributes for each model
