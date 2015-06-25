@@ -19,7 +19,7 @@
 
 5. app/treasures/new.html.erb allows us to create a new treasure
 
-6. app/treasures/show.html.erb allows us to commont on an existing feature
+6. app/treasures/show.html.erb allows us to comment on an existing feature
 
 7. app/treasures/index.html.erb is our home page
 
