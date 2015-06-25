@@ -2,6 +2,13 @@
 
 <ul>
 	<% @animals.each do |animal| %>
-		<li><%= link_to animal.name, animal_path(animal) %></li>
+		<li>
+			<strong><%= link_to animal.name, animal_path(animal) %></strong>
+			<%= link_to "Edit", edit_animal_path(animal) %>
+			<!-- This link uses the same route as the "show" method, so we need to call upon the "delete" method instead of the "get" method! -->
+			<%= link_to "Delete", animal_path(animal), method: :delete, data: { confirm: "Are you sure you want to delete #{animal.name}?" } %>
+		</li>
 	<% end %>
 </ul>
+
+<p><%= link_to 'New Animal', new_animal_path %></p>
