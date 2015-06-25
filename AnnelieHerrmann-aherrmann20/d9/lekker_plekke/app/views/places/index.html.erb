@@ -2,7 +2,12 @@
 
 <ul>
 	<% @places.each do |place| %>
-		<li><%= link_to place.name, place_path(place) %></li>
+		<li>
+			<strong><%= link_to place.name, place_path(place) %></strong>
+			<%= link_to 'Edit', edit_place_path(place) %>
+			<%= link_to "Delete", place_path(place), method: :delete, data: { confirm: "Are you sure you want to delte #{place.name}?"} %>
+		</li>
 	<% end %>
 </ul>
 
+<p><%= link_to "Add Place", new_place_path %></p>
