@@ -1,0 +1,9 @@
+6. We have not run migrations yet.
+
+13. We don't create views for the create and update actions, as these are changing the database and not providing html to the user. This is done by the new and edit actions, respectively.
+
+15. ????? I fixed the problem before it came up, apparently... I used rake routes early on in fixing this app.
+
+17. The seeded data is in our db/seeds.rb file. We use rake db:seed to seed the data.
+
+18. We need to iterate through the data for each seeded post to display the posts.
