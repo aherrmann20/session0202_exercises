@@ -20,7 +20,7 @@
 	<% @place_closing_string %>
 </p>
 
-<h2>Comments</h2>
+<!-- <h2>Comments</h2>
 <% @place.comments.each do |comment| %>
 	<p>
 		<strong>Commenter:</strong>
@@ -31,7 +31,9 @@
 		<strong>Comment:</strong>
 		<%= comment.body %>
 	</p>
-<% end %>
+<% end %> -->
+
+<%= render 'comments/comment' %>
 
 <h2>Add a comment:</h2>
 <%= form_for([@place, @place.comments.build]) do |f| %>
